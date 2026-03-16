@@ -1,0 +1,207 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#111;
+  color:white;
+}
+
+#root{
+  width:100%;
+}
+
+/* HEADER */
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:#000;
+}
+
+header h1 span{
+  color:#ff3c00;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ff3c00;
+}
+
+/* SEÇÕES */
+
+section{
+  padding:80px 60px;
+}
+
+section h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+/* HOME */
+
+#home{
+  text-align:center;
+}
+
+#home h2{
+  font-size:42px;
+}
+
+#home span{
+  color:#ff3c00;
+}
+
+#home p{
+  margin:20px 0;
+}
+
+#home button{
+  padding:12px 25px;
+  border:none;
+  background:#ff3c00;
+  color:white;
+  font-size:16px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+#home button:hover{
+  background:#ff5a2a;
+}
+
+/* SOBRE */
+
+#sobre{
+  background:#1b1b1b;
+}
+
+/* MODALIDADES */
+
+#modalidades{
+  text-align:center;
+}
+
+.exercicio{
+  display:inline-block;
+  margin:20px;
+}
+
+.exercicio img{
+  width:250px;
+  border-radius:10px;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+.exercicio img:hover{
+  transform:scale(1.05);
+}
+
+/* PLANOS */
+
+#planos{
+  background:#1b1b1b;
+  text-align:center;
+}
+
+.plano,
+.tabela_planos{
+  display:inline-block;
+  background:#222;
+  padding:30px;
+  margin:20px;
+  border-radius:10px;
+  width:250px;
+}
+
+.preco{
+  font-size:24px;
+  margin:10px 0;
+  color:#ff3c00;
+}
+
+.plano ul,
+.tabela_planos ul{
+  list-style:none;
+}
+
+.plano li,
+.tabela_planos li{
+  margin:8px 0;
+}
+
+.destaque{
+  border:2px solid #ff3c00;
+}
+
+/* DEPOIMENTOS */
+
+#depoimentos{
+  text-align:center;
+}
+
+.depoimento{
+  margin-top:20px;
+}
+
+#depoimentos p{
+  font-style:italic;
+}
+
+/* CONTATO */
+
+.contato form{
+  display:flex;
+  flex-direction:column;
+  max-width:400px;
+  margin:auto;
+}
+
+.contato input,
+.contato textarea{
+  margin:10px 0;
+  padding:10px;
+  border-radius:5px;
+  border:none;
+}
+
+.contato button{
+  padding:10px;
+  background:#ff3c00;
+  border:none;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.contato button:hover{
+  background:#ff5a2a;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+  margin-top:40px;
+}

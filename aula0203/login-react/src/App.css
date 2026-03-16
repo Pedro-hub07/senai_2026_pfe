@@ -1,0 +1,89 @@
+#root {
+  width: 100%;
+  height: 100vh;      
+  display: flex;        
+  justify-content: center;  
+  align-items: center;      
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  margin: 0;
+  background-color: #dcdcdc;
+  font-family: 'Georgia', serif;
+}
+.container {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+/* Login grande e estilizado */
+.titulo {
+  font-size: 55px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+
+/* Subtítulo */
+.subtitulo {
+  color: gray;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.label {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+.campo {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: #cfcfcf;
+  outline: none;
+  font-weight: bold;
+}
+
+
+.botao {
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 22px;
+  font-style: italic;
+  cursor: pointer;
+}
+.footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.textoFooter {
+  display: block;
+  color: gray;
+  margin-top: 5px;
+  font-size: 14px;
+  text-decoration: none;
+}

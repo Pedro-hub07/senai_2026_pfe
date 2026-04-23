@@ -1,0 +1,26 @@
+/* Fundo da tela */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4e73df, #224abe);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Garante altura total */
+html, body, #root {
+  height: 100%;
+}
+
+/* Card de login (opcional ajuste fino) */
+.card {
+  border-radius: 12px;
+}
+
+/* Efeito no botão */
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

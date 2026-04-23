@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 import "./Login.css";
 
-export default function Login() {
+export default function Register() {
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
+  const [confirmasenha, setConfirmaSenha] = useState('');
 
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100">
@@ -15,7 +15,7 @@ export default function Login() {
         <h2 className="text-center mb-4">Login</h2>
 
         <form>
-          
+            
           {/* USUÁRIO */}
           <div className="mb-3">
             <label className="form-label">Usuário</label>
@@ -38,10 +38,21 @@ export default function Login() {
             />
           </div>
 
+          <div className="mb-3">
+            <label className="form-label">Confirme sua senha</label>
+            <input
+              type="password"
+              className="form-control"
+              value={confirmasenha}
+              onChange={(e) => setConfirmaSenha(e.target.value)}
+            />
+          </div>
+
           {/* BOTÃO */}
-          <Link className="btn btn-primary w-100" to='/dashboard'>
+          <button className="btn btn-primary w-100">
             Entrar
-          </Link>
+          </button>
+
 
         </form>
       </div>

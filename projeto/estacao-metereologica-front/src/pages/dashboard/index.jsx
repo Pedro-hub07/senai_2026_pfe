@@ -1,0 +1,69 @@
+import Header from '../../components/header'
+import './Dashboard.css'
+
+export default function Dashboard(){
+    return(
+        <>
+        <Header />
+        <section className="cards">
+            <div className="card">
+                <h6>Temperatura</h6>
+                <h2>26º C</h2>
+            </div>
+            <div className="card">
+                <h6>Umidade</h6>
+                <h2>42%</h2>
+            </div>
+            <div className="card">
+                <h6>Pressão</h6>
+                <h2>1013 hPa</h2>
+            </div>
+            <div className="card">
+                <h6>Vento</h6>
+                <h2>11km</h2>
+            </div>
+        </section>
+
+        <section className="graficos">
+            <h6>Gráficos</h6>
+            <div>
+                {/* colocar gráficos */}
+            </div>
+        </section>
+
+        <section className="tabela">
+            <h6>Leituras Recentes</h6>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Temp.</th>
+                        <th>Umidade</th>
+                        <th>Vento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00</td>
+                        <td>16ºC</td>
+                        <td>31%</td>
+                        <td>23km</td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td>18ºC</td>
+                        <td>28%</td>
+                        <td>17km</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td>20ºC</td>
+                        <td>29%</td>
+                        <td>14km</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </>
+    )
+}

@@ -1,0 +1,96 @@
+/* FUNDO GERAL */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0b1426, #0f1f3d);
+    padding: 30px;
+    color: #e6edf3;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* TÍTULO */
+.container h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #c9d1ff;
+}
+
+.container p {
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+/* ÁREA DE GRÁFICOS */
+.graficos {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* CARD DA TABELA */
+.tabela-leituras {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(6px);
+}
+
+/* TÍTULO DA TABELA */
+.tabela-leituras::before {
+    content: "Leituras Recentes";
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #c9d1ff;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* CABEÇALHO */
+thead {
+    background: linear-gradient(90deg, #2f5fe3, #3a6cff);
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* LINHAS */
+td {
+    padding: 14px;
+    font-size: 14px;
+    color: #c9d1d9;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* HOVER NAS LINHAS */
+tbody tr:hover {
+    background: rgba(58, 108, 255, 0.08);
+    transition: 0.2s;
+}
+
+/* PRIMEIRA COLUNA MAIS SUAVE */
+td:first-child {
+    color: #8b949e;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

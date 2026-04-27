@@ -1,118 +1,54 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import Header from '../../components/header';
+import './Cadastro.css';
 
-export default function Login() {
+export default function Cadastro() {
+    const [nome, setNome] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [email, setEmail] = useState('');
+    const [celular, setCelular] = useState('');
+    const [documento, setDocumento] = useState('');
 
-    const [usuario, setUsuario] = useState('');
-    const [senha, setSenha] = useState('');
-    const [erro, setErro] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [mostrarSenha, setMostrarSenha] = useState(false);
+    return(
+        <section className="container">
+            <Header/>
 
-    const navigate = useNavigate();
+            <div className="card">
+                <h2>Cadastro de dados pessoais</h2>
 
-    const isFormValid = usuario.length >= 3 && senha.length >= 3;
+                <form className="form">
 
-    async function handleLogin(e) {
-        e.preventDefault();
-
-        if (!isFormValid) {
-            setErro("Preencha corretamente os campos.");
-            return;
-        }
-
-        setErro('');
-        setLoading(true);
-
-        setTimeout(() => {
-            if (usuario === "admin" && senha === "123") {
-                navigate("/dashboard");
-            } else {
-                setErro("Usuário ou senha inválidos.");
-            }
-            setLoading(false);
-        }, 1200);
-    }
-
-    return (
-        <section className="login-container">
-            <div className="login-box">
-
-                {/* IMAGEM */}
-                <div className="login-image">
-                    <img src={imgEstacao} alt="Estação Meteorológica" />
-                    <div className="image-overlay">
-                        <h1>Bem-vindo à Estação Meteorológica SESI SENAI</h1>
-                        <p>Monitoramento climático em tempo real</p>
+                    <div className="input-group">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Nome completo" value={nome} onChange={(e) => setNome(e.target.value)}/>
                     </div>
-                </div>
 
-                {/* FORM */}
-                <div className="login-form-side">
-                    <div className="form-wrapper">
-
-                        <h2>Login</h2>
-                        <p>Acesse sua conta</p>
-
-                        <form onSubmit={handleLogin} noValidate>
-
-                            {/* USUÁRIO */}
-                            <div className={`input-group ${erro ? "error" : ""}`}>
-                                <FaUser className="input-icon" />
-                                <input
-                                    type="text"
-                                    placeholder="Usuário"
-                                    value={usuario}
-                                    onChange={(e) => setUsuario(e.target.value)}
-                                    autoComplete="username"
-                                    aria-label="Usuário"
-                                />
-                            </div>
-
-                            {/* SENHA */}
-                            <div className={`input-group ${erro ? "error" : ""}`}>
-                                <FaLock className="input-icon" />
-
-                                <input
-                                    type={mostrarSenha ? "text" : "password"}
-                                    placeholder="Senha"
-                                    value={senha}
-                                    onChange={(e) => setSenha(e.target.value)}
-                                    autoComplete="current-password"
-                                    aria-label="Senha"
-                                />
-
-                                <span
-                                    className="toggle-password"
-                                    onClick={() => setMostrarSenha(!mostrarSenha)}
-                                >
-                                    {mostrarSenha ? <FaEyeSlash /> : <FaEye />}
-                                </span>
-                            </div>
-
-                            {/* ERRO */}
-                            {erro && <div className="erro-msg">{erro}</div>}
-
-                            {/* BOTÃO */}
-                            <button
-                                type="submit"
-                                className="btn-login"
-                                disabled={!isFormValid || loading}
-                            >
-                                {loading ? <span className="spinner"></span> : "Entrar"}
-                            </button>
-
-                            <div className="form-footer">
-                                <span>
-                                    Não tem conta? <Link to="/register">Cadastre-se</Link>
-                                </span>
-                            </div>
-
-                        </form>
+                    <div className="input-group">
+                        <label>Endereço</label>
+                        <input type="text" placeholder="Endereço" value={endereco} onChange={(e) => setEndereco(e.target.value)}/>
                     </div>
-                </div>
 
+                    <div className="input-group">
+                        <label>Email</label>
+                        <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    </div>
+
+                    <div className="input-group">
+                        <label>Celular</label>
+                        <input type="text" placeholder="Telefone celular" value={celular} onChange={(e) => setCelular(e.target.value)}/>
+                    </div>
+
+                    <div className="input-group">
+                        <label>Documento</label>
+                        <input type="text" placeholder="Documento" value={documento} onChange={(e) => setDocumento(e.target.value)}/>
+                    </div>
+
+                    <button className="btn">
+                        Salvar
+                    </button>
+
+                </form>
             </div>
         </section>
-    );
+    )
 }

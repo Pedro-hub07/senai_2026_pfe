@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  background-color: #111;
+  color: white;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #ffd600;
+  font-size: 28px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffd600;
+}
+
+main {
+  min-height: 75vh;
+  padding: 60px;
+}
+
+main h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.categorias {
+  display: flex;
+  gap: 20px;
+}
+
+.categorias a {
+  background-color: #111;
+  color: #ffd600;
+  text-decoration: none;
+  padding: 20px 35px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.categorias a:hover {
+  background-color: #ffd600;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+article {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+article h2 {
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.destaque {
+  background-color: #111;
+  color: white;
+  padding: 60px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.destaque span {
+  color: #ffd600;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.destaque h1 {
+  max-width: 700px;
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.destaque p {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.noticias h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.cards article {
+  max-width: none;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards article span {
+  color: #c5a900;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.cards article h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.cards article p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.cards article a {
+  margin-top: auto;
+  padding-top: 20px;
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cards article a:hover {
+  color: #c5a900;
+}

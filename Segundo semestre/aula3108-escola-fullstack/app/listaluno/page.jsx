@@ -89,12 +89,20 @@ export default function ListaAlunos() {
                       <span className={styles.badge}>{aluno.turma}</span>
                     </td>
                     <td>
-                      <button
-                        className={styles.buttonDanger}
-                        onClick={() => handleDelete(aluno.id, aluno.nome)}
-                      >
-                        Remover
-                      </button>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        <Link
+                          href={`/editaluno/${aluno.id}`}
+                          className={styles.buttonSecondary}
+                        >
+                          Editar
+                        </Link>
+                        <button
+                          className={styles.buttonDanger}
+                          onClick={() => handleDelete(aluno.id, aluno.nome)}
+                        >
+                          Remover
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
